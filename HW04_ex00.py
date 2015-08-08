@@ -35,11 +35,8 @@ for i in range(5):
 
 print 'the right answer was %d' % nr_correct
 
-
 ################################################################################
 def main():
-
-    
 
 if __name__ == '__main__':
     main()
