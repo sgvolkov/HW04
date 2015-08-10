@@ -22,17 +22,28 @@
 ################################################################################
 # Imports
 
+import math
 
 # Body
 
-
-
+def eval_loop(line):
+    value = None
+    while True:
+        line = raw_input('> Type a math equation. Write done when you '
+                         'want to exit: ')
+        if line == 'done':
+            return value
+        try:
+            value = eval(line)
+        except:
+            print "This failed, try math with numbers!"
+            continue
+        print value                 
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
-    
+
+    print eval_loop('hello')
 
 if __name__ == '__main__':
     main()
