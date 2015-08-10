@@ -18,26 +18,28 @@ import random
 
 nr_correct = random.randrange(1,26)
 
-for i in range(5):
-    try:
-        nr = int(raw_input("Guess the # I'm thinking of. It's between 1 - 25 "))
-    except:
-        ValueError
-        print "That's not a number! Try again"
-        continue
-    if nr == nr_correct:
-        print "Congrats!"
-        break
-    elif nr > nr_correct:
-        print "Too high, try again"
-    elif nr < nr_correct:
-        print "Too low, try again"
+def number():
+    for i in range(5):
+        try:
+            nr = int(raw_input("Guess the # I'm thinking of. It's between 1 - 25 "))
+        except:
+            ValueError
+            print "That's not a number! Try again"
+            continue
+        if nr == nr_correct:
+            print "Congrats!"
+            break
+        elif nr > nr_correct:
+            print "Too high, try again"
+        elif nr < nr_correct:
+            print "Too low, try again"
 
-print 'the right answer was %d' % nr_correct
+    print 'the right answer was %d' % nr_correct
 
 ################################################################################
 def main():
 
+    number()
 
 if __name__ == '__main__':
     main()
