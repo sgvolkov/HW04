@@ -32,8 +32,8 @@ def count(word, letter):
 ################################################################################
 def main():
 
-    print count('hello', 'l')
-    print count('dingbat', 'g')
+    count('hello', 'l')
+    count('dingbat', 'g')
 
 if __name__ == '__main__':
     main()
