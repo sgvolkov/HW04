@@ -20,6 +20,8 @@ def any_lowercase1(s):
             return True
         else:
             return False
+#this seems to work unless you start with a whitespace, in which case you get
+#a false False.
 
 def any_lowercase2(s):
     """Explain what is wrong, if anything, here.
@@ -29,6 +31,8 @@ def any_lowercase2(s):
             return 'True'
         else:
             return 'False'
+#Wrong. this is only looking at 'c' as it's written in the if statement, so it will
+#always be True.
 
 def any_lowercase3(s):
     """Explain what is wrong, if anything, here.
@@ -36,6 +40,9 @@ def any_lowercase3(s):
     for c in s:
         flag = c.islower()
     return flag
+
+#This only returns the value once it's complete, so you only get the value of
+#the last lowercase character.
 
 def any_lowercase4(s):
     """Explain what is wrong, if anything, here.
@@ -45,6 +52,8 @@ def any_lowercase4(s):
         flag = flag or c.islower()
     return flag
 
+#This will return either True or False.
+
 def any_lowercase5(s):
     """Explain what is wrong, if anything, here.
     """
@@ -53,14 +62,16 @@ def any_lowercase5(s):
             return False
     return True
 
+#If any character is not lowercase, it'll return False. 
+
 ################################################################################
 def main():
 
-    # Remove print("Hello World!") and for each function above that is wrong, 
-    # call that function with a string for which the function returns
-    # incorrectly.
-    # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    any_lowercase1("workswithoutwhitespaces")
+    any_lowercase2("isalwaystrue")
+    any_lowercase3("onlyvalueoflastlowercasecharacter")
+    any_lowercase4("returnstrueorfalse")
+    any_lowercase5("allcharactershavetobelowercase")
     
 
 if __name__ == '__main__':
